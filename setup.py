@@ -7,6 +7,7 @@ setup(
     install_requires=[
         'pytest',
         'selenium',
-        'webdriver-manager'
+        'webdriver-manager',
+        'python-dotenv'
     ],
 )

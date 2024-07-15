@@ -13,21 +13,22 @@ def test_error_messages(change_password_page):
     assert change_password_page.error_message_for_confirm_password_field
 
 
-def test_current_password_is_incorrect_toast_is_displayed(change_password_page,
-                                                          incorrect_current_password):
-    assert change_password_page.current_password_is_incorrect_toast_is_displayed(incorrect_current_password)
+def test_incorrect_password_toast_is_displayed(change_password_page,
+                                               incorrect_current_password):
+    assert change_password_page.incorrect_password_toast_is_displayed()
 
 
-def test_error_message_passwords_do_not_match_is_displayed(change_password_page,
+def test_passwords_do_not_match_error_message_is_displayed(change_password_page,
                                                            password_do_not_match):
-    assert change_password_page.error_message_passwords_do_not_match_is_displayed(password_do_not_match)
+    assert change_password_page.passwords_do_not_match_error_message_is_displayed()
 
 
-def test_error_message_minimum_number_of_characters_is_displayed(change_password_page,
-                                                                 minimum_number_of_characters_password):
-    assert change_password_page.error_message_minimum_number_of_characters_is_displayed(minimum_number_of_characters_password)
+def test_minimum_number_of_symbols_error_message_is_displayed(change_password_page,
+                                                              minimum_numbers_of_symbols_password):
+    assert change_password_page.minimum_number_of_symbols_error_message_is_displayed()
 
 
-def test_error_message_no_letters_in_password_is_displayed(change_password_page,
+def test_no_letters_in_password_error_message_is_displayed(change_password_page,
                                                            no_letters_in_password):
-    assert change_password_page.error_message_no_letters_in_password_is_displayed(no_letters_in_password)
+    assert change_password_page.no_letters_in_password_error_message_is_displayed()
+
